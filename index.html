@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- inclusione style -->
+    <link rel="stylesheet" href="assets/style.css">
+    <title>php - dischi</title>
+</head>
+<body>
+    
+    
+    <header>
+        <img src="assets/images/spotify-logo.png" alt="logo spotify">
+    </header>
+    
+    <div id="app">
+        
+        <div class="container">
+            <!-- generazione dinamica dischi -->
+            <div class="card" v-for="(album, index) in dischi" :key="index">
+                <img :src="album.poster" :alt="album.title">
+                <div>
+                    <h2>
+                        {{album.title}}
+                    </h2>
+                    <h3>
+                        {{album.author}}
+                    </h3>
+                    <h4>
+                        {{album.year}}
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="assets/script.js"></script>
+</body>
+</html>
